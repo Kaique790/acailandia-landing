@@ -160,6 +160,11 @@
   }
 }
 
+.products {
+  display: flex;
+  flex-direction: column;
+}
+
 .products .product {
   display: flex;
   flex-direction: column;
@@ -181,9 +186,14 @@
     align-items: center;
     gap: 1.5rem;
 
+    img {
+      height: 210px;
+      max-width: 100%;
+    }
+
     button {
-      color: var(--color-white);
-      background-color: #1e1e1ec5;
+      color: var(--color-black);
+      background-color: #e8b730c5;
 
       border-radius: 0.25rem;
       padding: 0.5rem;
@@ -193,7 +203,7 @@
     }
 
     button:hover {
-      background-color: #1e1e1e9c;
+      background-color: #e8b73088;
     }
   }
 
