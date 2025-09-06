@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: 3px solid var(--color-purple);
+  outline-offset: 2px;
+}
+
+html,
+body {
+  font-size: 1rem;
+  font-weight: normal;
+
+  font-family: "Baloo 2", sans-serif;
+  line-height: 160%;
+
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+
+button,
+a,
+input {
+  background: none;
+  border: none;
+
+  font-size: 1rem;
+  font-weight: normal;
+
+  font-family: "Baloo 2", sans-serif;
+  line-height: 160%;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+i {
+  line-height: 0%;
+}
+
+section {
+  padding-top: 2.5rem;
+}
+
+.section-title {
+  text-align: center;
+  h1,
+  h2 {
+    font-weight: bold;
+    font-size: 1.75rem;
+  }
+
+  p {
+    color: var(--color-muted);
+    font-size: 1.125rem;
+  }
+}
+
+.btn {
+  border: none;
+  background: none;
+
+  width: 216px;
+  padding: 0.25rem 0;
+
+  background-color: var(--color-green);
+  border-radius: 0.5rem;
+
+  font-weight: bold;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: var(--color-green-hover);
+  }
+}
+
+.btn-secondary {
+  border: none;
+  background: none;
+
+  color: var(--color-white);
+
+  width: 216px;
+  padding: 0.2rem 0;
+
+  border: 2px solid var(--color-white);
+  border-radius: 0.5rem;
+
+  font-weight: bold;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  width: fit-content;
+  margin: 1.5rem auto;
+}
