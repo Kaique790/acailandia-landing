@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
 
+    <link
+      rel="shortcut icon"
+      href="./assets/images/acai-copo.png"
+      type="image/x-icon"
+    />
+
     <link rel="stylesheet" href="./assets/css/default.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,9 +30,11 @@
   <body>
     <header class="header">
       <h2>Açailândia</h2>
-      <button>
-        <i class="bi bi-three-dots-vertical"></i>
-      </button>
+      <nav>
+        <button id="toggle-navbar">
+          <i class="bi bi-three-dots-vertical"></i>
+        </button>
+      </nav>
     </header>
     <main>
       <div>
@@ -58,7 +67,9 @@
 
             <div class="btn-container">
               <button class="btn">Garanta já o seu</button>
-              <button class="btn-secondary">Ver no instagram</button>
+              <button class="btn-secondary">
+                <div>Ver no instagram</div>
+              </button>
             </div>
 
             <div class="skills-wrapper">
@@ -86,6 +97,7 @@
           <h2>Nossos açais</h2>
           <p>Conheça nossas variações de açai</p>
         </div>
+
         <div class="product">
           <h3>Açai no copo</h3>
           <div class="container">
@@ -99,8 +111,16 @@
           </div>
 
           <div>
-            <button class="go-to btn">Pedir copo: M</button>
+            <button class="btn btn-gradient">
+              <div>Pedir copo: M</div>
+            </button>
             <span>3 complementos</span>
+          </div>
+
+          <div class="nav-carrousel">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
         <div class="product">
@@ -116,8 +136,16 @@
           </div>
 
           <div>
-            <button class="go-to btn">Pedir tijela: M</button>
+            <button class="btn btn-gradient">
+              <div>Pedir tijela: M</div>
+            </button>
             <span>4 complementos</span>
+          </div>
+
+          <div class="nav-carrousel">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
         <div class="product">
@@ -133,38 +161,99 @@
           </div>
 
           <div>
-            <button class="go-to btn">Pedir barca: M</button>
+            <button class="btn btn-gradient">
+              <div>Pedir barca: M</div>
+            </button>
             <span>5 complementos</span>
+          </div>
+
+          <div class="nav-carrousel">
+            <div class="active"></div>
+            <div></div>
+            <div></div>
           </div>
         </div>
 
         <aside>
-          <div class="call-action">
-            <p>Sentiu vontade? Chama no:</p>
-            <div>
-              <a href="https://google.com">
-                <i class="bi bi-whatsapp"></i>
-                ir
-              </a>
-              <a href="https://google.com">
-                <i class="bi bi-instagram"></i>
-                ir
-              </a>
+          <div>
+            <div class="call-action">
+              <p>Sentiu vontade? Chama no:</p>
+              <div>
+                <a href="https://google.com">
+                  <i class="bi bi-whatsapp"></i>
+                  ir
+                </a>
+                <a href="https://google.com">
+                  <i class="bi bi-instagram"></i>
+                  ir
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="complements">
-            <h4>Nossos complementos</h4>
-            <div>
-              <span> morango </span>
+            <div class="complements">
+              <h4>Nossos complementos</h4>
+              <div>
+                <span> morango </span>
+              </div>
+              <p>
+                <span>obs: </span>
+                caso queira mais complementos, será cobrado um valor de R$ 3 por
+                cada. Enviaremos separadamente.
+              </p>
             </div>
-            <p>
-              <span>obs: </span>
-              caso queira mais complementos, será cobrado um valor de R$ 3 por
-              cada. Enviaremos separadamente.
-            </p>
           </div>
         </aside>
       </section>
+
+      <section class="combinations">
+        <div class="section-title">
+          <h2>Nossos Combos</h2>
+          <p>Peça mais e pague menos com nosso combos</p>
+        </div>
+
+        <div class="combs-carrousel">
+          <div class="comb comb-emphasys">
+            <p>Combo toda familia</p>
+            <h4>3 tijelas M + 1 copo gratis</h4>
+
+            <img src="./assets/images/combinations/comb-1.png" alt="" />
+
+            <div>
+              <span>R$ 99,99</span>
+              <button class="btn btn-gradient">
+                <div>Garantir o meu</div>
+              </button>
+            </div>
+          </div>
+          <div class="comb">
+            <p>Combo toda familia</p>
+            <h4>3 tijelas M + 1 copo gratis</h4>
+
+            <img src="./assets/images/combinations/comb-1.png" alt="" />
+
+            <div>
+              <span>R$ 99,99</span>
+              <button class="btn btn-gradient">
+                <div>Garantir o meu</div>
+              </button>
+            </div>
+          </div>
+          <div class="comb">
+            <p>Combo toda familia</p>
+            <h4>3 tijelas M + 1 copo gratis</h4>
+
+            <img src="./assets/images/combinations/comb-1.png" alt="" />
+
+            <div>
+              <span>R$ 99,99</span>
+              <button class="btn btn-gradient">
+                <div>Garantir o meu</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script type="module" src="./script.js"></script>
     </main>
   </body>
 </html>

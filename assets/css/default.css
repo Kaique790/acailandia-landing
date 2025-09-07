@@ -21,6 +21,15 @@ body {
   color: var(--color-white);
 }
 
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
 button,
 a,
 input {
@@ -35,11 +44,6 @@ input {
 
   font-family: "Baloo 2", sans-serif;
   line-height: 160%;
-}
-
-body {
-  height: 100vh;
-  width: 100%;
 }
 
 i {
@@ -77,6 +81,11 @@ section {
   font-weight: bold;
   transition: all 0.2s;
 
+  div {
+    position: relative;
+    z-index: 1;
+  }
+
   &:hover {
     background-color: var(--color-green-hover);
   }
@@ -95,11 +104,38 @@ section {
   border-radius: 0.5rem;
 
   font-weight: bold;
-  transition: all 0.2s;
+
+  position: relative;
+  transition: all 1s;
+
+  &::before {
+    content: "";
+    border-radius: 0.2rem;
+
+    display: block;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 0;
+
+    transition: all 0.3s;
+  }
+
+  div {
+    position: relative;
+    z-index: 1;
+  }
 
   &:hover {
-    background-color: var(--color-white);
     color: var(--color-black);
+  }
+
+  &:hover::before {
+    width: 100%;
+    background-color: var(--color-white);
   }
 }
 
@@ -110,4 +146,38 @@ section {
 
   width: fit-content;
   margin: 1.5rem auto;
+}
+
+.btn-gradient {
+  background-image: linear-gradient(
+    to right,
+    var(--color-white),
+    var(--color-green)
+  );
+
+  padding-block: 0.15rem;
+
+  width: 160px;
+  position: relative;
+
+  &::before {
+    content: "";
+    border-radius: 0.5rem;
+
+    display: block;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 0;
+
+    transition: all 0.4s;
+  }
+
+  &:hover::before {
+    width: 100%;
+    background-color: var(--color-amber);
+  }
 }
