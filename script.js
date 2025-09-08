@@ -3,6 +3,7 @@ var heroCarrousel = document.querySelector("#hero-carrousel > div");
 var heroCarrouselElements = heroCarrousel.querySelectorAll("img");
 var heroNextBtn = document.getElementById("hero-next");
 var heroPreviousBtn = document.getElementById("hero-previous");
+var navHeroCarrouselNode = document.getElementById("hero-nav-carrousel");
 function handleToggleNavbar(e) {
     console.log(e);
 }
@@ -13,17 +14,29 @@ function checkElements() {
     else {
         console.error("Does not exists button toggle navbar");
     }
-    if (heroNextBtn) {
-        heroNextBtn.onclick = function () { return nextCarrousel(heroCarrouselElements); };
+    if (heroNextBtn && navHeroCarrouselNode) {
+        heroNextBtn.onclick = function () {
+            nextCarrousel(heroCarrouselElements);
+            changeNavCarrousel(heroCarrouselElements, navHeroCarrouselNode);
+        };
     }
     else {
-        console.error("Does not exists hero carrousel button");
+        console.error("Does not exists hero carrousel button or nav hero carrousel");
     }
-    if (heroPreviousBtn) {
-        heroPreviousBtn.onclick = function () { return previousCarrousel(heroCarrouselElements); };
+    if (heroPreviousBtn && navHeroCarrouselNode) {
+        heroPreviousBtn.onclick = function () {
+            previousCarrousel(heroCarrouselElements);
+            changeNavCarrousel(heroCarrouselElements, navHeroCarrouselNode);
+        };
     }
     else {
-        console.error("Does not exists hero carrousel previous button");
+        console.error("Does not exists hero carrousel previous button or nav hero carrousel");
+    }
+    if (heroCarrouselElements && navHeroCarrouselNode) {
+        addNavCarrousel(heroCarrouselElements, navHeroCarrouselNode);
+    }
+    else {
+        console.error("Does not exists hero carrousel nav or elements ");
     }
 }
 function nextCarrousel(elements) {
@@ -56,5 +69,24 @@ function previousCarrousel(elements) {
         return;
     }
     previousElement.classList.add("active");
+}
+function addNavCarrousel(carrouselElements, nodeElement) {
+    carrouselElements.forEach(function () {
+        var navElement = document.createElement("div");
+        nodeElement.appendChild(navElement);
+    });
+    changeNavCarrousel(carrouselElements, nodeElement);
+}
+function changeNavCarrousel(carrouselElements, nodeElement) {
+    var elementsArray = Array.from(carrouselElements);
+    var activeIndex = elementsArray.findIndex(function (el) {
+        return el.classList.contains("active");
+    });
+    var navs = nodeElement.querySelectorAll("div");
+    navs.forEach(function (nav) {
+        nav.classList.remove("active");
+    });
+    var activeNav = navs[activeIndex];
+    activeNav.classList.add("active");
 }
 checkElements();
