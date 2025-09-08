@@ -1,43 +1,12 @@
+var navbar = document.getElementById("navbar");
+var nodeCarrouselElements = document.querySelectorAll(".node-carrousel");
+var nextElementBtns = document.querySelectorAll(".next-carrousel");
+var previousElementBtns = document.querySelectorAll(".previous-carrousel");
+var nodeCarrouselNavs = document.querySelectorAll(".carrousel-nav");
 var buttonToggleNavbar = document.getElementById("toggle-navbar");
-var heroCarrousel = document.querySelector("#hero-carrousel > div");
-var heroCarrouselElements = heroCarrousel.querySelectorAll("img");
-var heroNextBtn = document.getElementById("hero-next");
-var heroPreviousBtn = document.getElementById("hero-previous");
-var navHeroCarrouselNode = document.getElementById("hero-nav-carrousel");
-function handleToggleNavbar(e) {
-    console.log(e);
-}
-function checkElements() {
-    if (buttonToggleNavbar) {
-        buttonToggleNavbar.onclick = handleToggleNavbar;
-    }
-    else {
-        console.error("Does not exists button toggle navbar");
-    }
-    if (heroNextBtn && navHeroCarrouselNode) {
-        heroNextBtn.onclick = function () {
-            nextCarrousel(heroCarrouselElements);
-            changeNavCarrousel(heroCarrouselElements, navHeroCarrouselNode);
-        };
-    }
-    else {
-        console.error("Does not exists hero carrousel button or nav hero carrousel");
-    }
-    if (heroPreviousBtn && navHeroCarrouselNode) {
-        heroPreviousBtn.onclick = function () {
-            previousCarrousel(heroCarrouselElements);
-            changeNavCarrousel(heroCarrouselElements, navHeroCarrouselNode);
-        };
-    }
-    else {
-        console.error("Does not exists hero carrousel previous button or nav hero carrousel");
-    }
-    if (heroCarrouselElements && navHeroCarrouselNode) {
-        addNavCarrousel(heroCarrouselElements, navHeroCarrouselNode);
-    }
-    else {
-        console.error("Does not exists hero carrousel nav or elements ");
-    }
+buttonToggleNavbar.addEventListener("click", handleToggleNavbar);
+function handleToggleNavbar() {
+    navbar.classList.toggle("show");
 }
 function nextCarrousel(elements) {
     var elementsArray = Array.from(elements);
@@ -89,4 +58,20 @@ function changeNavCarrousel(carrouselElements, nodeElement) {
     var activeNav = navs[activeIndex];
     activeNav.classList.add("active");
 }
-checkElements();
+nodeCarrouselElements.forEach(function (node, index) {
+    var carrouselElements = node.querySelectorAll("img");
+    var navNode = nodeCarrouselNavs[index];
+    addNavCarrousel(carrouselElements, navNode);
+    nextElementBtns.forEach(function (btn) {
+        btn.onclick = function () {
+            nextCarrousel(carrouselElements);
+            changeNavCarrousel(carrouselElements, navNode);
+        };
+    });
+    previousElementBtns.forEach(function (btn) {
+        btn.onclick = function () {
+            previousCarrousel(carrouselElements);
+            changeNavCarrousel(carrouselElements, navNode);
+        };
+    });
+});

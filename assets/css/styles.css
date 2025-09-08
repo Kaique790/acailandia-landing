@@ -71,7 +71,7 @@
   }
 }
 
-.nav-carrousel {
+.carrousel-nav {
   padding-top: 2rem;
 
   display: flex;
@@ -210,7 +210,7 @@
     display: block;
   }
 
-  .nav-carrousel {
+  .carrousel-nav {
     padding-top: 0;
   }
 }
