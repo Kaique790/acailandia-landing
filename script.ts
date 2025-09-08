@@ -1,51 +1,22 @@
-const buttonToggleNavbar = document.getElementById("toggle-navbar");
+const navbar = document.getElementById("navbar")!;
 
-const heroCarrousel = document.querySelector("#hero-carrousel > div");
-const heroCarrouselElements = heroCarrousel!.querySelectorAll("img");
+const nodeCarrouselElements = document.querySelectorAll(".node-carrousel")!;
 
-const heroNextBtn = document.getElementById("hero-next");
-const heroPreviousBtn = document.getElementById("hero-previous");
+const nextElementBtns =
+  document.querySelectorAll<HTMLButtonElement>(".next-carrousel")!;
 
-const navHeroCarrouselNode = document.getElementById("hero-nav-carrousel");
+const previousElementBtns = document.querySelectorAll<HTMLButtonElement>(
+  ".previous-carrousel"
+)!;
 
-function handleToggleNavbar(e: PointerEvent) {
-  console.log(e);
-}
+const nodeCarrouselNavs = document.querySelectorAll(".carrousel-nav")!;
 
-function checkElements() {
-  if (buttonToggleNavbar) {
-    buttonToggleNavbar.onclick = handleToggleNavbar;
-  } else {
-    console.error("Does not exists button toggle navbar");
-  }
+const buttonToggleNavbar = document.getElementById("toggle-navbar")!;
 
-  if (heroNextBtn && navHeroCarrouselNode) {
-    heroNextBtn.onclick = () => {
-      nextCarrousel(heroCarrouselElements);
-      changeNavCarrousel(heroCarrouselElements, navHeroCarrouselNode);
-    };
-  } else {
-    console.error(
-      "Does not exists hero carrousel button or nav hero carrousel"
-    );
-  }
+buttonToggleNavbar.addEventListener("click", handleToggleNavbar);
 
-  if (heroPreviousBtn && navHeroCarrouselNode) {
-    heroPreviousBtn.onclick = () => {
-      previousCarrousel(heroCarrouselElements);
-      changeNavCarrousel(heroCarrouselElements, navHeroCarrouselNode);
-    };
-  } else {
-    console.error(
-      "Does not exists hero carrousel previous button or nav hero carrousel"
-    );
-  }
-
-  if (heroCarrouselElements && navHeroCarrouselNode) {
-    addNavCarrousel(heroCarrouselElements, navHeroCarrouselNode);
-  } else {
-    console.error("Does not exists hero carrousel nav or elements ");
-  }
+function handleToggleNavbar() {
+  navbar.classList.toggle("show");
 }
 
 function nextCarrousel(elements: NodeListOf<HTMLElement>) {
@@ -92,7 +63,7 @@ function previousCarrousel(elements: NodeListOf<HTMLElement>) {
 
 function addNavCarrousel(
   carrouselElements: NodeListOf<HTMLElement>,
-  nodeElement: HTMLElement
+  nodeElement: HTMLElement | Element
 ) {
   carrouselElements.forEach(() => {
     const navElement = document.createElement("div");
@@ -104,7 +75,7 @@ function addNavCarrousel(
 
 function changeNavCarrousel(
   carrouselElements: NodeListOf<HTMLElement>,
-  nodeElement: HTMLElement
+  nodeElement: HTMLElement | Element
 ) {
   const elementsArray = Array.from(carrouselElements);
   const activeIndex = elementsArray.findIndex((el) =>
@@ -120,4 +91,23 @@ function changeNavCarrousel(
   activeNav.classList.add("active");
 }
 
-checkElements();
+nodeCarrouselElements.forEach((node, index) => {
+  const carrouselElements = node.querySelectorAll("img")!;
+
+  const navNode = nodeCarrouselNavs[index];
+  addNavCarrousel(carrouselElements, navNode);
+
+  nextElementBtns.forEach((btn) => {
+    btn.onclick = () => {
+      nextCarrousel(carrouselElements);
+      changeNavCarrousel(carrouselElements, navNode);
+    };
+  });
+
+  previousElementBtns.forEach((btn) => {
+    btn.onclick = () => {
+      previousCarrousel(carrouselElements);
+      changeNavCarrousel(carrouselElements, navNode);
+    };
+  });
+});
