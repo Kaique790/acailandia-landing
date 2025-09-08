@@ -34,10 +34,25 @@
   width: 100%;
 
   img {
+    position: absolute;
+    right: 100vw;
+
     filter: drop-shadow(12px 8px 1px rgba(0, 0, 0, 0.199));
 
     max-width: 100%;
     width: 300px;
+
+    transform: translateY(100px);
+
+    opacity: 0;
+  }
+
+  img.active {
+    position: static;
+    transform: translateY(0);
+
+    transition: all 0.5s;
+    opacity: 1;
   }
 
   button {
