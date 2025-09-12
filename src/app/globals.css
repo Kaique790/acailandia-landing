@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --font-poppins: var(--font-poppins);
+  --font-baloo: var(--font-baloo);
+}
+
+@theme inline {
+  --font-poppins: var(--font-poppins);
+  --font-baloo: var(--font-baloo);
+
+  --color-primary: #7e3ca2;
+  --color-secondary: #e8b730;
+
+  --color-light: #ffffff;
+  --color-dark: #1e1e1e;
+
+  --color-light-2: #c5bde4;
+  --color-dark-2: #473d3d;
+}
+
+@media (prefers-color-scheme: dark) {
+}
+
+body {
+}
