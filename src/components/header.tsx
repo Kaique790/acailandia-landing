@@ -18,7 +18,11 @@ export function Header() {
               Garantir o meu
             </a>
           </Button>
-          <Button variant={"secondary"} className="font-normal" asChild>
+          <Button
+            variant={"secondary"}
+            className="hidden font-normal sm:block"
+            asChild
+          >
             <a href="" target="_blank">
               Ver no instagram
             </a>
