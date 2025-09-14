@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${poppins.variable} ${baloo.variable} font-poppins text-dark antialiased`}
+        className={`${poppins.variable} ${baloo.variable} font-poppins text-dark pt-40 antialiased`}
       >
         <Header />
         {children}
