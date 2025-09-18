@@ -1,4 +1,4 @@
-import { DropDownNavbar } from "./dropdown-navbar";
+import { NavbarMenu } from "./navbar-menu";
 
 export function Navbar() {
   return (
@@ -29,7 +29,7 @@ export function Navbar() {
           </a>
         </li>
       </ul>
-      <DropDownNavbar />
+      <NavbarMenu />
     </nav>
   );
 }
