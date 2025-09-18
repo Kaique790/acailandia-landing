@@ -30,7 +30,10 @@ export function NavbarMenu() {
 
     const element = document.getElementById(id);
 
-    if (!element) return;
+    if (!element) {
+      console.error("NavbarMenu error: does not exists section element.");
+      return;
+    }
     element.scrollIntoView({ behavior: "smooth" });
   }
 
