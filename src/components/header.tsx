@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 export function Header() {
   return (
-    <div className="bg-primary fixed top-0 w-screen">
+    <div className="bg-primary fixed top-0 z-1 w-full max-w-full">
       <header className="text-light font-baloo mx-auto flex w-full max-w-[1064px] items-center justify-between px-4 py-3">
         <a href="#">
           <h2 className="text-2xl font-bold md:text-3xl">Açailândia</h2>

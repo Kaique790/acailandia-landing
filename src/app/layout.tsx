@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${poppins.variable} ${baloo.variable} font-poppins text-dark pt-40 antialiased`}
+        className={`${poppins.variable} ${baloo.variable} font-poppins text-dark max-w-screen overflow-x-hidden pt-40 antialiased`}
       >
         <Header />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
