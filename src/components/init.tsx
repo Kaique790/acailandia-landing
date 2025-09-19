@@ -29,10 +29,17 @@ export function Init() {
         </div>
         <div className="mt-8 flex w-[240] flex-col gap-3">
           <Button className="border-primary border-2" asChild>
-            <a href="">Garanta já o seu</a>
+            <a
+              target="_blank"
+              href="https://wa.me/5579991389449?text=Olá!%20gostaria%20de%20fazer%20o%20pedido%20de%20um%20açai%20no%20capricho!"
+            >
+              Garanta já o seu
+            </a>
           </Button>
           <Button variant={"outline"} asChild>
-            <a href="">Ver no instagram</a>
+            <a target="_blank" href="https://instagram.com/acai.landia94">
+              Ver no instagram
+            </a>
           </Button>
         </div>
         <div className="absolute -top-[180px] -right-[0] -z-1 w-[372px] lg:hidden">
