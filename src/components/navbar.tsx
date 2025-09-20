@@ -5,11 +5,7 @@ export function Navbar() {
     <nav>
       <ul className="text-light-2 hidden gap-3 font-semibold md:flex">
         <li>
-          <a
-            className="hover:bg-dark-2/40 rounded-md px-2"
-            href="#nossos-acais"
-            target="_blank"
-          >
+          <a className="hover:bg-dark-2/40 rounded-md px-2" href="#products">
             Açais
           </a>
         </li>
@@ -19,7 +15,10 @@ export function Navbar() {
           </a>
         </li>
         <li>
-          <a href="#localizacao" className="hover:bg-dark-2/40 rounded-md px-2">
+          <a
+            href="#localizacao"
+            className="hover:bg-dark-2/40 truncate rounded-md px-2"
+          >
             Onde estamos
           </a>
         </li>
