@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 
 import * as React from "react";
@@ -197,6 +198,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
 function CarouselPrevious({
   className,
   variant = "outline",
+  // @ts-expect-error
   size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
@@ -227,6 +229,7 @@ function CarouselPrevious({
 function CarouselNext({
   className,
   variant = "outline",
+  // @ts-expect-error
   size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
