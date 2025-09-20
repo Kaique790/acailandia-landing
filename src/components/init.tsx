@@ -28,7 +28,7 @@ export function Init() {
           <p className="text-dark-2">Nova açaiteria no Luís Alves.</p>
         </div>
         <div className="mt-8 flex w-[240] flex-col gap-3">
-          <Button className="border-primary border-2" asChild>
+          <Button className="border-primary w-[240px] border-2" asChild>
             <a
               target="_blank"
               href="https://wa.me/5579991389449?text=Olá!%20gostaria%20de%20fazer%20o%20pedido%20de%20um%20açai%20no%20capricho!"
@@ -36,13 +36,13 @@ export function Init() {
               Garanta já o seu
             </a>
           </Button>
-          <Button variant={"outline"} asChild>
+          <Button variant={"outline"} className="w-[240px]" asChild>
             <a target="_blank" href="https://instagram.com/acai.landia94">
               Ver no instagram
             </a>
           </Button>
         </div>
-        <div className="absolute -top-[180px] -right-[0] -z-1 w-[372px] lg:hidden">
+        <div className="absolute -top-[180px] -right-0 -z-1 w-[372px] lg:hidden">
           <Image src="/home-bg.png" width={800} height={800} alt="" />
         </div>
         <div className="absolute -top-[200px] -right-[520px] -z-1 hidden w-[1000px] lg:block">
@@ -62,6 +62,7 @@ export function Init() {
             align: "center",
             loop: true,
           }}
+          autoplay={true}
           className="w-[250px] max-w-sm md:w-[275px]"
         >
           <CarouselContent>

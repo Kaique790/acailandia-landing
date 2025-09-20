@@ -33,17 +33,17 @@ const cupProducts = [
 
 const potProducts = [
   {
-    name: "Pote: P",
+    name: "Tamanho: P",
     image: "/pote-carousel/acai-pote-1.svg",
     complements: "4 complementos",
   },
   {
-    name: "Pote: M",
+    name: "Tamanho: M",
     image: "/pote-carousel/acai-pote-2.png",
     complements: "4 complementos",
   },
   {
-    name: "Pote: G",
+    name: "Tamanho: G",
     image: "/pote-carousel/acai-pote-3.svg",
     complements: "4 complementos",
   },
@@ -77,7 +77,7 @@ export function Products() {
                         width={800}
                         height={800}
                         src={p.image}
-                        className="w-[250px]"
+                        className="h-[300px] object-cover"
                         alt=""
                         quality={100}
                       />

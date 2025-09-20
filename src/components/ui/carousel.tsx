@@ -18,6 +18,7 @@ type CarouselProps = {
   opts?: CarouselOptions;
   plugins?: CarouselPlugin;
   orientation?: "horizontal" | "vertical";
+  autoplay?: boolean;
   setApi?: (api: CarouselApi) => void;
 };
 
@@ -49,6 +50,7 @@ function Carousel({
   plugins,
   className,
   children,
+  autoplay = false,
   ...props
 }: React.ComponentProps<"div"> & CarouselProps) {
   const [carouselRef, api] = useEmblaCarousel(
@@ -60,6 +62,8 @@ function Carousel({
   );
   const [canScrollPrev, setCanScrollPrev] = React.useState(false);
   const [canScrollNext, setCanScrollNext] = React.useState(false);
+
+  const autoplayRef = React.useRef<NodeJS.Timeout | null>(null);
 
   const onSelect = React.useCallback((api: CarouselApi) => {
     if (!api) return;
@@ -89,6 +93,24 @@ function Carousel({
   );
 
   React.useEffect(() => {
+    if (!api || !autoplay) return;
+
+    const play = () => {
+      if (api.canScrollNext()) {
+        api.scrollNext();
+      } else {
+        api.scrollTo(0);
+      }
+    };
+
+    autoplayRef.current = setInterval(play, 1500); // 1.5 seconds
+
+    return () => {
+      if (autoplayRef.current) clearInterval(autoplayRef.current);
+    };
+  }, [api, autoplay]);
+
+  React.useEffect(() => {
     if (!api || !setApi) return;
     setApi(api);
   }, [api, setApi]);
@@ -115,6 +137,7 @@ function Carousel({
         scrollPrev,
         scrollNext,
         canScrollPrev,
+        autoplay,
         canScrollNext,
       }}
     >
@@ -174,7 +197,7 @@ function CarouselItem({ className, ...props }: React.ComponentProps<"div">) {
 function CarouselPrevious({
   className,
   variant = "outline",
-  size = "sm",
+  size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
@@ -204,7 +227,7 @@ function CarouselPrevious({
 function CarouselNext({
   className,
   variant = "outline",
-  size = "sm",
+  size = "icon",
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { orientation, scrollNext, canScrollNext } = useCarousel();
