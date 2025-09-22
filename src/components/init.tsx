@@ -74,7 +74,7 @@ export function Init() {
                   height={350}
                   src={p}
                   alt=""
-                  className="w-[250px] md:w-[320px]"
+                  className="w-[250px] drop-shadow-[8px_8px_0px_#00000039] md:w-[320px]"
                 />
               </CarouselItem>
             ))}

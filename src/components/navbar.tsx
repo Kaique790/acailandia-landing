@@ -5,25 +5,34 @@ export function Navbar() {
     <nav>
       <ul className="text-light-2 hidden gap-3 font-semibold md:flex">
         <li>
-          <a className="hover:bg-dark-2/40 rounded-md px-2" href="#products">
+          <a
+            className="hover:bg-dark-2/40 hover:text-light rounded-md px-2 duration-150"
+            href="#products"
+          >
             Açais
           </a>
         </li>
         <li>
-          <a href="#combos" className="hover:bg-dark-2/40 rounded-md px-2">
+          <a
+            href="#combos"
+            className="hover:bg-dark-2/40 hover:text-light rounded-md px-2 duration-150"
+          >
             Combos
           </a>
         </li>
         <li>
           <a
             href="#localizacao"
-            className="hover:bg-dark-2/40 truncate rounded-md px-2"
+            className="hover:bg-dark-2/40 hover:text-light truncate rounded-md px-2 duration-150"
           >
             Onde estamos
           </a>
         </li>
         <li>
-          <a href="#contato" className="hover:bg-dark-2/40 rounded-md px-2">
+          <a
+            href="#contato"
+            className="hover:bg-dark-2/40 hover:text-light rounded-md px-2 duration-150"
+          >
             Contato
           </a>
         </li>
