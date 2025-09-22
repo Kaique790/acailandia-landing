@@ -51,14 +51,14 @@ const potProducts = [
 
 export function Products() {
   return (
-    <section id="products" className="bg-primary text-light mt-20 py-8">
+    <section id="products" className="bg-primary text-light mx-auto mt-20 py-8">
       <header className="w-full text-center">
         <h1 className="font-baloo text-5xl font-bold tracking-tight">
           Nossos Açais
         </h1>
         <p className="text-light-2">Escolha o tamanho da sua vontade.</p>
       </header>
-      <div className="mx-auto w-fit items-center justify-center md:flex">
+      <div className="mx-auto max-w-[1064px] items-center justify-center md:flex">
         <div className="mt-14">
           <h4 className="font-baloo text-center font-bold">Açai no copo</h4>
           <div className="mx-auto flex w-[400px] items-center justify-center">
@@ -71,13 +71,13 @@ export function Products() {
             >
               <CarouselContent>
                 {cupProducts.map((p, index) => (
-                  <CarouselItem key={index} className="">
-                    <div className="ga-3 flex flex-col">
+                  <CarouselItem key={index}>
+                    <div className="flex flex-col gap-2">
                       <Image
                         width={800}
                         height={800}
                         src={p.image}
-                        className="h-[300px] object-cover"
+                        className="h-[250px] object-cover"
                         alt=""
                         quality={100}
                       />
@@ -88,8 +88,8 @@ export function Products() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselNext className="text-light border-light hover:bg-light hover:text-dark" />
-              <CarouselPrevious className="text-light border-light hover:bg-light hover:text-dark" />
+              <CarouselNext className="text-light border-light hover:bg-light hover:text-dark right-0" />
+              <CarouselPrevious className="text-light border-light hover:bg-light hover:text-dark left-0" />
             </Carousel>
           </div>
         </div>
@@ -156,8 +156,8 @@ export function Products() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselNext className="text-light border-light hover:bg-light hover:text-dark" />
-              <CarouselPrevious className="text-light border-light hover:bg-light hover:text-dark" />
+              <CarouselNext className="text-light border-light hover:bg-light hover:text-dark right-0" />
+              <CarouselPrevious className="text-light border-light hover:bg-light hover:text-dark left-0" />
             </Carousel>
           </div>
         </div>
