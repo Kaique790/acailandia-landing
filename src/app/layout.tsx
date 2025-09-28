@@ -30,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html lang="pt-BR">
       <body
-        className={`${poppins.variable} ${baloo.variable} font-poppins text-dark max-w-screen overflow-x-hidden pt-40 antialiased`}
+        className={`${poppins.variable} ${baloo.variable} font-poppins text-dark max-w-screen overflow-x-hidden scroll-smooth pt-40 antialiased`}
       >
         <Header />
         <main>{children}</main>

@@ -174,3 +174,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+html {
+  min-width: 100vw;
+  overflow: hidden;
+}
+
+body {
+  overflow-y: auto;
+  height: 100dvh;
+
+  max-width: 100vw;
+  min-width: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar {
+  width: 2.5px;
+}

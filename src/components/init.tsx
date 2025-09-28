@@ -49,14 +49,14 @@ export function Init() {
           <Image src="/home-bg-lg.png" width={800} height={800} alt="" />
         </div>
 
-        <div className="mt-17 flex gap-4">
+        <div className="mt-17 flex gap-4 max-[360px]:max-w-[400px]">
           <MinCard title="4+" text="Combos" />
           <MinCard title="5+" text="Tamanhos" />
-          <MinCard variant="fill" title="10+" text="Complemen." />
+          <MinCard variant="fill" title="10+" text="Complementos" />
         </div>
       </div>
 
-      <div className="mx-auto mt-20 flex w-[400px] items-center justify-center">
+      <div className="mx-auto mt-20 flex items-center justify-center max-[400px]:w-[400px]">
         <Carousel
           opts={{
             align: "center",
