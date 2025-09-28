@@ -16,6 +16,7 @@ const buttonVariants = cva(
           "bg-secondary text-dark hover:bg-secondary/90 focus-visible:ring-secondary",
         outline:
           "border border-dark text-dark bg-transparent hover:bg-dark hover:text-light focus-visible:ring-dark",
+        dark: "text-dark bg-dark hover:bg-dark/90 text-light focus-visible:ring-dark",
       },
       size: {
         sm: "px-4 py-1.5 text-sm",
