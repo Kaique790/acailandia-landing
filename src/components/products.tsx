@@ -51,7 +51,10 @@ const potProducts = [
 
 export function Products() {
   return (
-    <section id="products" className="bg-primary text-light mx-auto mt-20 py-8">
+    <section
+      id="products"
+      className="text-light to-primary mx-auto mt-20 bg-gradient-to-r from-pink-500 py-8"
+    >
       <header className="w-full text-center">
         <h1 className="font-baloo text-5xl font-bold tracking-tight">
           Nossos Açais
