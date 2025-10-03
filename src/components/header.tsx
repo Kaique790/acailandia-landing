@@ -9,9 +9,9 @@ export function Header() {
           <h2 className="text-2xl font-bold md:text-3xl">Açailândia</h2>
         </a>
 
-        <div className="flex gap-3 md:order-3">
+        <div className="flex gap-3 min-[820px]:order-3">
           <Button
-            className="hover:bg-light border-light hover:text-dark hidden border font-normal sm:block"
+            className="hover:bg-light border-light hover:text-dark hidden truncate border font-normal sm:block"
             asChild
           >
             <a href="" target="_blank">
@@ -20,7 +20,7 @@ export function Header() {
           </Button>
           <Button
             variant={"secondary"}
-            className="hidden font-normal sm:block"
+            className="hidden truncate font-normal sm:block"
             asChild
           >
             <a href="" target="_blank">

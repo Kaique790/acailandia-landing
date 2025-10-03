@@ -3,7 +3,7 @@ import { NavbarMenu } from "./navbar-menu";
 export function Navbar() {
   return (
     <nav>
-      <ul className="text-light-2 hidden gap-3 font-semibold md:flex">
+      <ul className="text-light-2 hidden gap-3 font-semibold min-[820px]:flex">
         <li>
           <a
             className="hover:bg-dark-2/40 hover:text-light rounded-md px-2 duration-150"

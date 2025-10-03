@@ -38,7 +38,7 @@ export function NavbarMenu() {
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
-          <button className="cursor-pointer md:hidden">
+          <button className="cursor-pointer min-[820px]:hidden">
             <DotsThreeVerticalIcon size={32} weight="bold" />
             <span className="sr-only">Abrir menu de navegação</span>
           </button>
