@@ -9,10 +9,13 @@ import Image from "next/image";
 
 export function Contact() {
   return (
-    <section id="contato" className="mt-14 px-4 text-center">
+    <section
+      id="contato"
+      className="relative mx-auto mt-14 max-w-[1064px] px-4 text-center md:flex md:items-start md:justify-between"
+    >
       <div>
-        <div>
-          <h4 className="flex items-center justify-center gap-2 text-3xl font-bold">
+        <div className="md:flex md:flex-col">
+          <h4 className="flex items-center justify-center gap-2 text-3xl font-bold md:justify-start">
             <MapPinIcon weight="fill" /> Onde estamos:
           </h4>
           <address>Localizados no luís alvez - Rua C, n: 36</address>
@@ -22,7 +25,7 @@ export function Contact() {
           </Button>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-10 md:flex md:flex-col">
           <h4 className="flex items-center justify-center gap-2 text-3xl font-bold">
             <PhoneIcon weight="fill" /> Onde estamos:
           </h4>
@@ -43,7 +46,7 @@ export function Contact() {
         alt=""
         width={1000}
         height={1000}
-        className="mt-16 drop-shadow-xl"
+        className="mt-16 ml-[5%] w-[650px] drop-shadow-xl md:-mt-16 md:ml-0"
       />
     </section>
   );

@@ -11,7 +11,7 @@ import { ContactButton } from "./ui/contact-button";
 export function Combos() {
   return (
     <section id="combos" className="pt-12">
-      <header className="w-full text-center">
+      <header className="w-full pb-6 text-center">
         <h1 className="font-baloo text-5xl font-bold tracking-tight">
           Nossos combos
         </h1>
@@ -46,7 +46,7 @@ export function Combos() {
           </div>
         </div>
 
-        <div className="bg-secondary border-dark mx-auto w-fit rounded-md border py-4 sm:mr-auto sm:ml-0">
+        <div className="bg-secondary border-dark mx-4 rounded-md border py-4 sm:mr-auto sm:ml-0">
           <div className="flex items-start justify-between gap-4 px-6 text-sm">
             <div>
               <h4 className="font-bold">Veja o cardápio completo</h4>
@@ -59,7 +59,7 @@ export function Combos() {
           <div className="bg-dark-2/60 my-3 h-px w-full" />
 
           <div className="flex gap-2 px-6">
-            <Button className="bg-dark hover:bg-dark/90 w-[150px]">
+            <Button className="bg-dark hover:bg-dark/90 w-[150px] max-w-[150px]">
               Ver cardápio
             </Button>
             <Button variant="outline">Ver açais</Button>

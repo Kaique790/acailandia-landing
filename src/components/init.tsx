@@ -49,21 +49,21 @@ export function Init() {
           <Image src="/home-bg-lg.png" width={800} height={800} alt="" />
         </div>
 
-        <div className="mt-17 flex gap-4 max-[360px]:max-w-[400px]">
+        <div className="mt-17 flex max-w-full gap-4">
           <MinCard title="4+" text="Combos" />
-          <MinCard title="5+" text="Tamanhos" />
-          <MinCard variant="fill" title="10+" text="Complementos" />
+          <MinCard title="5+" text="Taman..." />
+          <MinCard variant="fill" title="10+" text="Complem..." />
         </div>
       </div>
 
-      <div className="mx-auto mt-20 flex items-center justify-center max-[400px]:w-[400px]">
+      <div className="mx-auto mt-20 flex items-center justify-center">
         <Carousel
           opts={{
             align: "center",
             loop: true,
           }}
           autoplay={true}
-          className="w-[250px] max-w-sm md:w-[275px]"
+          className="w-[250px] max-w-full md:w-[275px]"
         >
           <CarouselContent>
             {products.map((p, index) => (

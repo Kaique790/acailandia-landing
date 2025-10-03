@@ -43,6 +43,20 @@
   }
 }
 
+@keyframes gradient-slide {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-slide 8s linear infinite;
+}
+
 :root {
   --font-poppins: var(--font-poppins);
   --font-baloo: var(--font-baloo);
