@@ -14,9 +14,8 @@ export function CombosCarousel() {
     initial: 0,
     slides: {
       perView: "auto",
-      spacing: 32,
+      spacing: 22,
     },
-    loop: true,
 
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
@@ -27,8 +26,8 @@ export function CombosCarousel() {
   });
 
   return (
-    <div className="relative mx-auto mt-10 space-y-6">
-      <div className="navigation-wrapper flex w-full max-w-screen items-center justify-center gap-4">
+    <div className="mt-10space-y-6 relative">
+      <div className="navigation-wrapper flex w-full max-w-screen items-center justify-center gap-4 pb-8">
         {loaded && instanceRef.current && (
           <>
             <button
@@ -87,12 +86,15 @@ export function CombosCarousel() {
         )}
       </div>
       <div className="bg-dark absolute top-[270px] right-0 h-[150px] w-screen" />
-      <div ref={sliderRef} className="keen-slider px-6 py-4">
+      <div
+        ref={sliderRef}
+        className="keen-slider mx-auto max-w-[1064px] px-6 py-4"
+      >
         {combos.map((combo, i) => (
           <div
             key={combo.title}
             className={cn(
-              `keen-slider__slide number-slide${i + 1} min-w-[328px] rounded-md shadow-[6px_6px_4px_#24242429]`,
+              `keen-slider__slide number-slide${i + 1} min-w-[328px] rounded-md`,
               currentSlide === i && "translate-x-2 scale-102",
             )}
           >

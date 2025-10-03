@@ -48,7 +48,7 @@ export function ComboCard({
 
         <ul className="mt-4">
           {attributes.map((att) => (
-            <li key={att}>{att}</li>
+            <li key={att}>• {att}</li>
           ))}
         </ul>
       </div>
