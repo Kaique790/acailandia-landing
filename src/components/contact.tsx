@@ -25,12 +25,12 @@ export function Contact() {
           </Button>
         </div>
 
-        <div className="mt-10 md:flex md:flex-col">
-          <h4 className="flex items-center justify-center gap-2 text-3xl font-bold">
+        <div className="mt-10 md:flex md:flex-col md:text-left">
+          <h4 className="flex items-center gap-2 text-3xl font-bold">
             <PhoneIcon weight="fill" /> Onde estamos:
           </h4>
           <p>Vejas nossos açais ou peça o seu!</p>
-          <div className="mx-auto mt-4 flex max-w-[360px] items-center justify-center gap-2">
+          <div className="mx-auto mt-4 flex max-w-[360px] items-center justify-center gap-2 md:mx-0 md:justify-start">
             <Button variant="dark" className="flex-1 gap-2">
               Whatsapp <WhatsappLogoIcon size={18} />
             </Button>

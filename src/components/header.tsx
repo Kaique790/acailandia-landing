@@ -14,7 +14,10 @@ export function Header() {
             className="hover:bg-light border-light hover:text-dark hidden truncate border font-normal sm:block"
             asChild
           >
-            <a href="" target="_blank">
+            <a
+              href="https://wa.me/5579991389449?text=Olá!%20gostaria%20de%20fazer%20o%20pedido%20de%20um%20açai%20no%20capricho!"
+              target="_blank"
+            >
               Garantir o meu
             </a>
           </Button>
@@ -23,7 +26,7 @@ export function Header() {
             className="hidden truncate font-normal sm:block"
             asChild
           >
-            <a href="" target="_blank">
+            <a href="https://instagram.com/acai.landia94" target="_blank">
               Ver no instagram
             </a>
           </Button>
