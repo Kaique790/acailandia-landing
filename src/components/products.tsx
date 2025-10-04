@@ -13,21 +13,19 @@ const cupProducts = [
     name: "Copo: 300ml",
     image: "/copo-carousel/acai-copo-4.png",
     complements: "3 complementos",
+    link: "https://wa.me/5579991389449?text=Ol%C3%A1%20gostaria%20de%20um%20copo%20de%20300ml%20no%20capricho!",
   },
   {
     name: "Copo: 400ml",
     image: "/copo-carousel/acai-copo-3.png",
     complements: "3 complementos",
+    link: "https://wa.me/5579991389449?text=Ol%C3%A1%20gostaria%20de%20um%20copo%20de%20400ml%20no%20capricho!",
   },
   {
     name: "Copo: 500ml",
     image: "/copo-carousel/acai-copo-1.png",
     complements: "3 complementos",
-  },
-  {
-    name: "Copo: 700ml",
-    image: "/copo-carousel/acai-copo-2.png",
-    complements: "3 complementos",
+    link: "https://wa.me/5579991389449?text=Ol%C3%A1%20gostaria%20de%20um%20copo%20de%20500ml%20no%20capricho!",
   },
 ];
 
@@ -36,16 +34,13 @@ const potProducts = [
     name: "Tamanho: P",
     image: "/pote-carousel/acai-pote-1.svg",
     complements: "4 complementos",
+    link: "https://wa.me/5579991389449?text=Ol%C3%A1%20gostaria%20de%20um%20pote%20tamanho%20P%20no%20capricho!",
   },
   {
     name: "Tamanho: M",
     image: "/pote-carousel/acai-pote-2.png",
     complements: "4 complementos",
-  },
-  {
-    name: "Tamanho: G",
-    image: "/pote-carousel/acai-pote-3.svg",
-    complements: "4 complementos",
+    link: "https://wa.me/5579991389449?text=Ol%C3%A1%20gostaria%20de%20um%20pote%20tamanho%20M%20no%20capricho!",
   },
 ];
 
@@ -85,7 +80,7 @@ export function Products() {
                         quality={100}
                       />
                       <Button variant={"secondary"} asChild>
-                        <a href="">{p.name}</a>
+                        <a href={p.link}>{p.name}</a>
                       </Button>
                     </div>
                   </CarouselItem>
@@ -109,7 +104,7 @@ export function Products() {
               <CarouselContent>
                 {potProducts.map((p, index) => (
                   <CarouselItem key={index} className="">
-                    <div className="ga-3 flex flex-col">
+                    <a href={p.link} className="flex flex-col gap-3">
                       <Image
                         width={800}
                         height={800}
@@ -119,9 +114,9 @@ export function Products() {
                         quality={100}
                       />
                       <Button variant={"secondary"} asChild>
-                        <a href="">{p.name}</a>
+                        <a href={p.link}>{p.name}</a>
                       </Button>
-                    </div>
+                    </a>
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -153,7 +148,7 @@ export function Products() {
                         quality={100}
                       />
                       <Button variant={"secondary"} asChild>
-                        <a href="">{p.name}</a>
+                        <a href={p.link}>{p.name}</a>
                       </Button>
                     </div>
                   </CarouselItem>

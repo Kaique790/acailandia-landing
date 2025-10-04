@@ -1,4 +1,4 @@
-mtreimport {
+import {
   InstagramLogoIcon,
   MapPinIcon,
   PhoneIcon,
@@ -25,8 +25,8 @@ export function Contact() {
           </Button>
         </div>
 
-        <div className="mt-10 md:flex md:flex-col md:text-left text-center">
-          <h4 className="flex items-center gap-2 text-3xl font-bold justify-center md:justify-start">
+        <div className="mt-10 text-center md:flex md:flex-col md:text-left">
+          <h4 className="flex items-center justify-center gap-2 text-3xl font-bold md:justify-start">
             <PhoneIcon weight="fill" /> ENtre em contato:
           </h4>
           <p>Vejas nossos açais ou peça o seu!</p>
