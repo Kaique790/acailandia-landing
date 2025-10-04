@@ -26,8 +26,8 @@ export function Contact() {
         </div>
 
         <div className="mt-10 text-center md:flex md:flex-col md:text-left">
-          <h4 className="flex items-center justify-center gap-2 text-3xl font-bold md:justify-start">
-            <PhoneIcon weight="fill" /> ENtre em contato:
+          <h4 className="flex items-center justify-center gap-2 text-3xl font-bold whitespace-nowrap md:justify-start">
+            <PhoneIcon weight="fill" /> Entre em contato:
           </h4>
           <p>Vejas nossos açais ou peça o seu!</p>
           <div className="mx-auto mt-4 flex max-w-[360px] items-center justify-center gap-2 md:mx-0 md:justify-start">

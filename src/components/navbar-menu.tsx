@@ -85,7 +85,7 @@ export function NavbarMenu() {
             <MathOperationsIcon size={18} />
           </a>
           <a
-            href="#localizacao"
+            href="#contato"
             className="hover:bg-dark-2 flex min-w-full items-center justify-between rounded-md px-4 py-2 font-semibold"
           >
             Onde estamos
@@ -106,8 +106,8 @@ export function NavbarMenu() {
               className="border-light w-full font-normal sm:hidden"
               asChild
             >
-              <a 
-                href="https://wa.me/5579991389449?text=Olá!%20gostaria%20de%20fazer%20o%20pedido%20de%20um%20açai%20no%20capricho!" 
+              <a
+                href="https://wa.me/5579991389449?text=Olá!%20gostaria%20de%20fazer%20o%20pedido%20de%20um%20açai%20no%20capricho!"
                 target="_blank"
               >
                 Garantir o meu

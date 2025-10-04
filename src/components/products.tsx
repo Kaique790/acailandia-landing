@@ -80,7 +80,9 @@ export function Products() {
                         quality={100}
                       />
                       <Button variant={"secondary"} asChild>
-                        <a href={p.link}>{p.name}</a>
+                        <a target="_blank" href={p.link}>
+                          {p.name}
+                        </a>
                       </Button>
                     </div>
                   </CarouselItem>
@@ -114,7 +116,9 @@ export function Products() {
                         quality={100}
                       />
                       <Button variant={"secondary"} asChild>
-                        <a href={p.link}>{p.name}</a>
+                        <a target="_blank" href={p.link}>
+                          {p.name}
+                        </a>
                       </Button>
                     </a>
                   </CarouselItem>
@@ -148,7 +152,9 @@ export function Products() {
                         quality={100}
                       />
                       <Button variant={"secondary"} asChild>
-                        <a href={p.link}>{p.name}</a>
+                        <a target="_blank" href={p.link}>
+                          {p.name}
+                        </a>
                       </Button>
                     </div>
                   </CarouselItem>

@@ -22,7 +22,7 @@ export function Navbar() {
         </li>
         <li>
           <a
-            href="#localizacao"
+            href="#contato"
             className="hover:bg-dark-2/40 hover:text-light truncate rounded-md px-2 duration-150"
           >
             Onde estamos
