@@ -18,7 +18,7 @@ export function Contact() {
           <h4 className="flex items-center justify-center gap-2 text-3xl font-bold md:justify-start">
             <MapPinIcon weight="fill" /> Onde estamos:
           </h4>
-          <address>Localizados no luís alvez - Rua C, n: 36</address>
+          <address>Localizados no luís alves - Rua C, n: 36</address>
 
           <Button variant="dark" className="mt-4 w-[176px]">
             Ver no mapa
