@@ -118,7 +118,7 @@ export function NavbarMenu() {
               className="w-full font-normal sm:hidden"
               asChild
             >
-              <a href="" target="_blank">
+              <a href="https://instagram.com/acai.landia94" target="_blank">
                 Ver no instagram
               </a>
             </Button>
