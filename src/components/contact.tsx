@@ -26,7 +26,7 @@ export function Contact() {
         </div>
 
         <div className="mt-10 md:flex md:flex-col md:text-left text-center">
-          <h4 className="flex items-center gap-2 text-3xl font-bold">
+          <h4 className="flex items-center gap-2 text-3xl font-bold justify-center md:justify-start">
             <PhoneIcon weight="fill" /> ENtre em contato:
           </h4>
           <p>Vejas nossos açais ou peça o seu!</p>
