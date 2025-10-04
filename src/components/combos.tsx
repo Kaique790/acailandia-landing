@@ -33,7 +33,7 @@ export function Combos() {
                   Pedir pelo whatspp <WhatsappLogoIcon size={18} weight="fill" />
                 </a>
               </Button>
-              <Button disabled className="border-dark flex items-center gap-2 border bg-rose-600 hover:bg-rose-700">
+              <Button asChild disabled className="border-dark flex items-center gap-2 border bg-rose-600 hover:bg-rose-700">
                 <a>
                   Pedir pelo ifood{" "}
                   <Image width={28} height={28} src="/ifood-logo.png" alt="" />
