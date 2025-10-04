@@ -5,10 +5,14 @@ import { cn } from "@/lib/utils";
 interface ContactButtonProps {
   Icon: Icon;
   link: string;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
-export function ContactButton({ Icon, link, disabled }: ContactButtonProps) {
+export function ContactButton({
+  Icon,
+  link,
+  disabled = true,
+}: ContactButtonProps) {
   return (
     <a
       href={link}
