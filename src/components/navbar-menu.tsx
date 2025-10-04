@@ -106,7 +106,10 @@ export function NavbarMenu() {
               className="border-light w-full font-normal sm:hidden"
               asChild
             >
-              <a href="" target="_blank">
+              <a 
+                href="https://wa.me/5579991389449?text=Olá!%20gostaria%20de%20fazer%20o%20pedido%20de%20um%20açai%20no%20capricho!" 
+                target="_blank"
+              >
                 Garantir o meu
               </a>
             </Button>
