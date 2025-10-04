@@ -45,7 +45,7 @@ export function Combos() {
 
             <div className="space-y-2">
               <ContactButton link="https://instagram.com/acai.landia94" Icon={InstagramLogoIcon} />
-              <ContactButton link="http" Icon={MapPinIcon} />
+              <ContactButton disabled={true} link="http" Icon={MapPinIcon} />
             </div>
           </div>
         </div>
