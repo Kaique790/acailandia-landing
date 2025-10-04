@@ -28,19 +28,23 @@ export function Combos() {
           </h4>
           <div className="mt-4 flex w-[600px] max-w-full items-center justify-between gap-6">
             <div className="flex w-[200px] flex-col gap-2">
-              <Button className="border-dark text-dark flex items-center gap-2 border bg-green-600 hover:bg-green-700">
-                Pedir pelo whatspp <WhatsappLogoIcon size={18} weight="fill" />
+              <Button asChild className="border-dark text-dark flex items-center gap-2 border bg-green-600 hover:bg-green-700">
+                <a href="https://instagram.com/acai.landia94" target="_blank">
+                  Pedir pelo whatspp <WhatsappLogoIcon size={18} weight="fill" />
+                </a>
               </Button>
-              <Button className="border-dark flex items-center gap-2 border bg-rose-600 hover:bg-rose-700">
-                Pedir pelo ifood{" "}
-                <Image width={28} height={28} src="/ifood-logo.png" alt="" />
+              <Button disabled className="border-dark flex items-center gap-2 border bg-rose-600 hover:bg-rose-700">
+                <a>
+                  Pedir pelo ifood{" "}
+                  <Image width={28} height={28} src="/ifood-logo.png" alt="" />
+                </a>
               </Button>
             </div>
 
             <div className="bg-dark-2/60 h-[50px] w-px" />
 
             <div className="space-y-2">
-              <ContactButton link="http" Icon={InstagramLogoIcon} />
+              <ContactButton link="https://instagram.com/acai.landia94" Icon={InstagramLogoIcon} />
               <ContactButton link="http" Icon={MapPinIcon} />
             </div>
           </div>
