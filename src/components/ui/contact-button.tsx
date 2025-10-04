@@ -11,7 +11,7 @@ interface ContactButtonProps {
 export function ContactButton({
   Icon,
   link,
-  disabled = true,
+  disabled = false,
 }: ContactButtonProps) {
   return (
     <a
