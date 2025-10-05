@@ -36,34 +36,47 @@ export function Footer() {
           <Button
             className="text-light border-secondary hover:bg-secondary hover:text-dark my-4 gap-2"
             variant="outline"
+            asChild
           >
-            Contatar desenvolvedor <WhatsappLogoIcon size={16} weight="bold" />
+            <a href="https://wa.me/5579991389449">
+              Contatar desenvolvedor{" "}
+              <WhatsappLogoIcon size={16} weight="bold" />
+            </a>
           </Button>
 
           <div className="mx-auto flex w-fit gap-2 md:mx-0">
             <Button variant="secondary" className="group">
-              <WhatsappLogoIcon weight="fill" size={18} />
-              <ArrowUpRightIcon
-                weight="bold"
-                size={18}
-                className="duration-100 group-hover:translate-x-[1.5px] group-hover:-translate-y-[1.5px]"
-              />
+              <a className="flex" href="https://wa.me/5579991389449">
+                <WhatsappLogoIcon weight="fill" size={18} />
+                <ArrowUpRightIcon
+                  weight="bold"
+                  size={18}
+                  className="duration-100 group-hover:translate-x-[1.5px] group-hover:-translate-y-[1.5px]"
+                />
+              </a>
             </Button>
             <Button variant="secondary" className="group">
-              <InstagramLogoIcon weight="fill" size={18} />
-              <ArrowUpRightIcon
-                weight="bold"
-                size={18}
-                className="duration-100 group-hover:translate-x-[1.5px] group-hover:-translate-y-[1.5px]"
-              />
+              <a className="flex" href="https://instagram.com/z_kaiq_z">
+                <InstagramLogoIcon weight="fill" size={18} />
+                <ArrowUpRightIcon
+                  weight="bold"
+                  size={18}
+                  className="duration-100 group-hover:translate-x-[1.5px] group-hover:-translate-y-[1.5px]"
+                />
+              </a>
             </Button>
-            <Button variant="secondary" className="group">
-              <LinkedinLogoIcon weight="fill" size={18} />
-              <ArrowUpRightIcon
-                weight="bold"
-                size={18}
-                className="duration-100 group-hover:translate-x-[1.5px] group-hover:-translate-y-[1.5px]"
-              />
+            <Button variant="secondary" asChild className="group">
+              <a
+                className="flex"
+                href="https://www.linkedin.com/in/dev-kaique790"
+              >
+                <LinkedinLogoIcon weight="fill" size={18} />
+                <ArrowUpRightIcon
+                  weight="bold"
+                  size={18}
+                  className="duration-100 group-hover:translate-x-[1.5px] group-hover:-translate-y-[1.5px]"
+                />
+              </a>
             </Button>
           </div>
 
