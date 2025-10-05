@@ -16,7 +16,7 @@ export function Footer() {
             <span className="text-secondary font-baloo font-semibold">
               Nosso número:{" "}
             </span>
-            (79) 9 9999-9999
+            (79) 9 9138-9449
           </p>
           <p>
             <span className="text-secondary font-baloo font-semibold">
